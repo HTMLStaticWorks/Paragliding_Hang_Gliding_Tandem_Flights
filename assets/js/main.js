@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.getElementById('mobile-menu');
     
     if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
+        const toggleMenu = () => {
             mobileMenu.classList.toggle('translate-x-full');
             
             // Toggle icons
@@ -66,6 +66,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 menuIcon.classList.toggle('hidden');
                 closeIcon.classList.toggle('hidden');
             }
+        };
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        // Close button inside the menu
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        if (mobileMenuClose) {
+            mobileMenuClose.addEventListener('click', toggleMenu);
+        }
+
+        // Close menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                const menuIcon = mobileMenuBtn.querySelector('.menu-icon');
+                const closeIcon = mobileMenuBtn.querySelector('.close-icon');
+                if (menuIcon && closeIcon) {
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                }
+            });
         });
     }
 
@@ -123,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const href = link.getAttribute('href');
         if (href === currentPath || (currentPath === 'index.html' && href === './')) {
             link.classList.add('text-primary');
-            link.classList.remove('text-slate-800', 'dark:text-white', 'dark:text-slate-100');
+            link.classList.remove('text-black', 'text-slate-800', 'dark:text-white', 'dark:text-slate-100');
             
             // Mobile specific highlight
             if (link.closest('#mobile-menu')) {
@@ -132,4 +154,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // 8. Scroll to Top
+    const scrollTopBtn = document.getElementById('scroll-top');
+    if (scrollTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
+

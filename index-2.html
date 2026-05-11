@@ -29,7 +29,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+<body class="bg-slate-50 dark:bg-slate-900 text-black dark:text-slate-100 transition-colors duration-300">
 
     <!-- Navbar -->
     <nav id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent py-4">
@@ -38,27 +38,27 @@
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center gap-2 text-2xl font-bold tracking-tighter">
                     <i class="ph-fill ph-paper-plane-tilt text-primary text-3xl"></i>
-                    <span class="text-slate-900 dark:text-white drop-shadow-md">Aero<span class="text-primary">Glide</span></span>
+                    <span class="text-black dark:text-white drop-shadow-md">Aero<span class="text-primary">Glide</span></span>
                 </a>
 
                 <!-- Desktop Menu -->
                 <div class="hidden lg:flex items-center gap-8">
-                    <a href="index.html" class="text-slate-800 dark:text-white hover:text-primary font-medium transition-colors">Home</a>
-                    <a href="index-2.html" class="text-slate-800 dark:text-white hover:text-primary font-medium transition-colors">Home 2</a>
-                    <a href="about.html" class="text-slate-800 dark:text-white hover:text-primary font-medium transition-colors">About</a>
-                    <a href="services.html" class="text-slate-800 dark:text-white hover:text-primary font-medium transition-colors">Services</a>
-                    <a href="pricing.html" class="text-slate-800 dark:text-white hover:text-primary font-medium transition-colors">Pricing</a>
-                    <a href="contact.html" class="text-slate-800 dark:text-white hover:text-primary font-medium transition-colors">Contact</a>
+                    <a href="index.html" class="text-black dark:text-white hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="index-2.html" class="text-black dark:text-white hover:text-primary font-medium transition-colors">Home 2</a>
+                    <a href="about.html" class="text-black dark:text-white hover:text-primary font-medium transition-colors">About</a>
+                    <a href="services.html" class="text-black dark:text-white hover:text-primary font-medium transition-colors">Services</a>
+                    <a href="pricing.html" class="text-black dark:text-white hover:text-primary font-medium transition-colors">Pricing</a>
+                    <a href="contact.html" class="text-black dark:text-white hover:text-primary font-medium transition-colors">Contact</a>
                 </div>
 
                 <!-- Actions -->
                 <div class="flex items-center gap-2 lg:gap-4">
                     <!-- RTL Toggle -->
-                    <button id="rtl-toggle" class="p-2 rounded-full glass hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-slate-800 dark:text-white" aria-label="Toggle RTL">
+                    <button id="rtl-toggle" class="p-2 rounded-full glass hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-black dark:text-white" aria-label="Toggle RTL">
                         <span class="font-bold text-sm">RTL</span>
                     </button>
                     <!-- Theme Toggle -->
-                    <button id="theme-toggle" class="p-2 rounded-full glass hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-slate-800 dark:text-white" aria-label="Toggle Theme">
+                    <button id="theme-toggle" class="p-2 rounded-full glass hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-black dark:text-white" aria-label="Toggle Theme">
                         <i class="ph ph-moon text-xl dark-mode-icon"></i>
                         <i class="ph ph-sun text-xl light-mode-icon text-yellow-300"></i>
                     </button>
@@ -68,7 +68,7 @@
                     </a>
 
                     <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-800 dark:text-white z-[100] relative">
+                    <button id="mobile-menu-btn" class="lg:hidden p-2 text-black dark:text-white z-[100] relative">
                         <i class="ph ph-list text-3xl menu-icon"></i>
                         <i class="ph ph-x text-3xl close-icon hidden"></i>
                     </button>
@@ -78,27 +78,27 @@
     </nav>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 !bg-white dark:!bg-slate-900 shadow-2xl transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-center items-center px-6 z-[80]">
-        <a href="index.html" class="py-4 text-2xl font-bold border-b border-slate-100 dark:border-slate-800 text-slate-800 dark:text-slate-100 w-full text-center">Home</a>
-        <a href="index-2.html" class="py-4 text-2xl font-bold border-b border-slate-100 dark:border-slate-800 text-slate-800 dark:text-slate-100 w-full text-center">Home 2</a>
-        <a href="about.html" class="py-4 text-2xl font-bold border-b border-slate-100 dark:border-slate-800 text-slate-800 dark:text-slate-100 w-full text-center">About</a>
-        <a href="services.html" class="py-4 text-2xl font-bold border-b border-slate-100 dark:border-slate-800 text-slate-800 dark:text-slate-100 w-full text-center">Services</a>
-        <a href="pricing.html" class="py-4 text-2xl font-bold border-b border-slate-100 dark:border-slate-800 text-slate-800 dark:text-slate-100 w-full text-center">Pricing</a>
-        <a href="contact.html" class="py-4 text-2xl font-bold border-b border-slate-100 dark:border-slate-800 text-slate-800 dark:text-slate-100 w-full text-center">Contact</a>
+    <div id="mobile-menu" class="fixed inset-0 !bg-white dark:!bg-slate-900 shadow-2xl transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-center items-center px-6 z-[80]"><button id="mobile-menu-close" class="absolute top-6 right-6 text-black dark:text-white lg:hidden" aria-label="Close Menu"><i class="ph ph-x text-3xl"></i></button>
+        <a href="index.html" class="py-4 text-2xl font-bold border-b border-slate-100 dark:border-slate-800 text-black dark:text-slate-100 w-full text-center">Home</a>
+        <a href="index-2.html" class="py-4 text-2xl font-bold border-b border-slate-100 dark:border-slate-800 text-black dark:text-slate-100 w-full text-center">Home 2</a>
+        <a href="about.html" class="py-4 text-2xl font-bold border-b border-slate-100 dark:border-slate-800 text-black dark:text-slate-100 w-full text-center">About</a>
+        <a href="services.html" class="py-4 text-2xl font-bold border-b border-slate-100 dark:border-slate-800 text-black dark:text-slate-100 w-full text-center">Services</a>
+        <a href="pricing.html" class="py-4 text-2xl font-bold border-b border-slate-100 dark:border-slate-800 text-black dark:text-slate-100 w-full text-center">Pricing</a>
+        <a href="contact.html" class="py-4 text-2xl font-bold border-b border-slate-100 dark:border-slate-800 text-black dark:text-slate-100 w-full text-center">Contact</a>
         
         <a href="booking.html" class="mt-8 bg-primary text-white text-center py-4 rounded-xl font-bold shadow-lg shadow-primary/20 w-full text-xl">Book Now</a>
     </div>
 
     <!-- 1. Fullscreen Adventure Hero -->
     <section class="relative h-screen flex items-center justify-center overflow-hidden parallax-bg" style="background-image: url('assets/images/hang_gliding_valley_1778495978898.png');">
-        <div class="absolute inset-0 bg-white/10 dark:bg-black/70"></div>
+        <div class="absolute inset-0 bg-white/50 dark:bg-black/70"></div>
         
         <div class="container mx-auto px-6 relative z-10 text-center mt-20" data-aos="zoom-in" data-aos-duration="1000">
             <span class="inline-block border border-accent text-accent py-1 px-4 rounded-full text-sm font-bold tracking-widest uppercase mb-6 bg-accent/10 backdrop-blur-sm">Niche Adventure Tour</span>
-            <h1 class="text-5xl md:text-8xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight">
+            <h1 class="text-5xl md:text-8xl font-black text-black dark:text-white mb-6 uppercase tracking-tight">
                 Extreme <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-yellow-500">Altitude</span>
             </h1>
-            <p class="text-xl text-slate-800 dark:text-slate-200 mb-10 max-w-2xl mx-auto font-light">
+            <p class="text-xl text-black dark:text-slate-200 mb-10 max-w-2xl mx-auto font-medium">
                 For the true adrenaline seeker. High-altitude thermal flights spanning cross-country with elite acrobatic maneuvers.
             </p>
             <a href="#booking" class="btn-premium bg-accent text-white px-10 py-5 rounded-none font-bold text-lg hover:bg-accent-hover transition-colors inline-flex items-center gap-2">
@@ -112,7 +112,7 @@
         <div class="container mx-auto px-6 max-w-5xl">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl md:text-5xl font-bold mb-4">Your Mission <span class="text-accent">Timeline</span></h2>
-                <p class="text-slate-600 dark:text-slate-400">Step-by-step breakdown of your extreme altitude experience.</p>
+                <p class="text-black dark:text-slate-400">Step-by-step breakdown of your extreme altitude experience.</p>
             </div>
 
             <div class="relative border-l-4 border-slate-200 dark:border-slate-800 ml-6 md:ml-12 space-y-12">
@@ -121,14 +121,14 @@
                     <div class="md:flex items-center justify-between">
                         <div class="md:w-5/12 text-right hidden md:block pr-8">
                             <h3 class="text-2xl font-bold">Basecamp Briefing</h3>
-                            <p class="text-slate-500 dark:text-slate-400">08:00 AM</p>
+                            <p class="text-black dark:text-slate-400">08:00 AM</p>
                         </div>
                         <div class="absolute left-[-26px] md:left-1/2 md:-ml-[22px] w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold border-4 border-white dark:border-slate-900 z-10 shadow-lg">
                             1
                         </div>
                         <div class="md:w-5/12 md:pl-8">
                             <h3 class="text-2xl font-bold md:hidden mb-2">Basecamp Briefing</h3>
-                            <p class="text-slate-600 dark:text-slate-400 glass p-6 rounded-2xl">Meet your master pilot, review weather charts, and receive technical safety instructions.</p>
+                            <p class="text-black dark:text-slate-400 glass p-6 rounded-2xl">Meet your master pilot, review weather charts, and receive technical safety instructions.</p>
                         </div>
                     </div>
                 </div>
@@ -138,14 +138,14 @@
                     <div class="md:flex items-center justify-between flex-row-reverse">
                         <div class="md:w-5/12 text-left hidden md:block pl-8">
                             <h3 class="text-2xl font-bold">Ascent to Launch</h3>
-                            <p class="text-slate-500 dark:text-slate-400">09:00 AM</p>
+                            <p class="text-black dark:text-slate-400">09:00 AM</p>
                         </div>
                         <div class="absolute left-[-26px] md:left-1/2 md:-ml-[22px] w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold border-4 border-white dark:border-slate-900 z-10 shadow-lg">
                             2
                         </div>
                         <div class="md:w-5/12 md:pr-8 text-right">
                             <h3 class="text-2xl font-bold md:hidden mb-2 text-left">Ascent to Launch</h3>
-                            <p class="text-slate-600 dark:text-slate-400 glass p-6 rounded-2xl text-left md:text-right">Off-road 4x4 transport to our highest altitude launch point at 8,500 ft.</p>
+                            <p class="text-black dark:text-slate-400 glass p-6 rounded-2xl text-left md:text-right">Off-road 4x4 transport to our highest altitude launch point at 8,500 ft.</p>
                         </div>
                     </div>
                 </div>
@@ -155,14 +155,14 @@
                     <div class="md:flex items-center justify-between">
                         <div class="md:w-5/12 text-right hidden md:block pr-8">
                             <h3 class="text-2xl font-bold text-accent">Cross-Country Flight</h3>
-                            <p class="text-slate-500 dark:text-slate-400">10:30 AM</p>
+                            <p class="text-black dark:text-slate-400">10:30 AM</p>
                         </div>
                         <div class="absolute left-[-26px] md:left-1/2 md:-ml-[22px] w-10 h-10 rounded-full bg-white text-accent flex items-center justify-center font-bold border-4 border-accent z-10 shadow-lg">
                             3
                         </div>
                         <div class="md:w-5/12 md:pl-8">
                             <h3 class="text-2xl font-bold md:hidden mb-2 text-accent">Cross-Country Flight</h3>
-                            <p class="text-slate-600 dark:text-slate-400 glass p-6 rounded-2xl border-l-4 border-accent">The main event. Catch thermal updrafts, fly among the clouds, and experience high-G acrobatic maneuvers (optional).</p>
+                            <p class="text-black dark:text-slate-400 glass p-6 rounded-2xl border-l-4 border-accent">The main event. Catch thermal updrafts, fly among the clouds, and experience high-G acrobatic maneuvers (optional).</p>
                         </div>
                     </div>
                 </div>
@@ -179,7 +179,7 @@
                         <i class="ph-bold ph-warning text-3xl"></i>
                     </div>
                     <h2 class="text-3xl md:text-5xl font-bold mb-6">Strict <span class="text-red-500">Requirements</span></h2>
-                    <p class="text-slate-600 dark:text-slate-400 text-lg mb-8">Extreme altitude flights require strict adherence to physical limitations to ensure equipment integrity and passenger safety.</p>
+                    <p class="text-black dark:text-slate-400 text-lg mb-8">Extreme altitude flights require strict adherence to physical limitations to ensure equipment integrity and passenger safety.</p>
                     
                     <ul class="space-y-4">
                         <li class="flex items-center gap-3 glass p-4 rounded-xl">
@@ -249,7 +249,7 @@
                             <i class="ph-bold ph-caret-down"></i>
                         </span>
                     </summary>
-                    <div class="text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+                    <div class="text-black dark:text-slate-400 mt-4 leading-relaxed">
                         Extreme flights are highly weather dependent. If conditions are unsafe, we will reschedule your flight for the next available window at no additional cost.
                     </div>
                 </details>
@@ -262,7 +262,7 @@
                             <i class="ph-bold ph-caret-down"></i>
                         </span>
                     </summary>
-                    <div class="text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+                    <div class="text-black dark:text-slate-400 mt-4 leading-relaxed">
                         Yes! Just let your pilot know during the basecamp briefing. Maneuvers like wingovers and deep spirals pull up to 3Gs.
                     </div>
                 </details>
@@ -275,7 +275,7 @@
                             <i class="ph-bold ph-caret-down"></i>
                         </span>
                     </summary>
-                    <div class="text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+                    <div class="text-black dark:text-slate-400 mt-4 leading-relaxed">
                         Dress as if you are going for a hike in cold weather. Windproof jacket, gloves, and sturdy ankle-supporting boots are mandatory.
                     </div>
                 </details>
@@ -289,14 +289,14 @@
             <div class="absolute inset-0 bg-gradient-to-r from-transparent via-accent/5 to-transparent skew-x-12 translate-x-full group-hover:-translate-x-full transition-transform duration-1000"></div>
             
             <h2 class="text-4xl md:text-6xl font-black mb-6 uppercase">Commit to the <br/><span class="text-accent">Drop</span></h2>
-            <p class="text-lg text-slate-600 dark:text-slate-400 mb-10">Secure your spot for the extreme altitude tour. Limited to 2 slots per day.</p>
+            <p class="text-lg text-black dark:text-slate-400 mb-10">Secure your spot for the extreme altitude tour. Limited to 2 slots per day.</p>
             
             <form class="max-w-xl mx-auto space-y-4 mb-8">
                 <input type="text" placeholder="Full Name (as on ID)" class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-accent">
                 <input type="email" placeholder="Email Address" class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-accent">
                 <div class="flex items-center gap-3 text-left">
                     <input type="checkbox" id="waiver" class="w-5 h-5 text-accent rounded focus:ring-accent accent-accent">
-                    <label for="waiver" class="text-sm text-slate-600 dark:text-slate-400">I agree to sign the digital <a href="#" class="text-accent underline">Liability Waiver</a> before flight.</label>
+                    <label for="waiver" class="text-sm text-black dark:text-slate-400">I agree to sign the digital <a href="#" class="text-accent underline">Liability Waiver</a> before flight.</label>
                 </div>
             </form>
             
@@ -353,11 +353,16 @@
                 </div>
             </div>
             
-            <div class="border-t border-slate-800 pt-8 flex justify-center items-center gap-4 text-sm text-slate-500 text-center">
+            <div class="border-t border-slate-800 pt-8 flex justify-center items-center gap-4 text-sm text-black dark:text-slate-500 text-center">
                 <p>&copy; 2026 AeroGlide Aviation. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Scroll Top -->
+    <button id="scroll-top" class="bg-primary text-white shadow-lg" aria-label="Scroll to Top">
+        <i class="ph-bold ph-caret-up"></i>
+    </button>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>

@@ -8,7 +8,7 @@
   --accent-hover: #c2410c;
   --bg-light: #f8fafc;
   --bg-dark: #0f172a;
-  --text-light: #334155;
+  --text-light: #000000;
   --text-dark: #f8fafc;
   
   /* Glassmorphism */
@@ -146,3 +146,54 @@ footer .flex.space-x-4 a:hover i {
 
 .dark .dark-mode-icon { display: none; } /* Moon hidden in dark mode */
 .dark .light-mode-icon { display: block; } /* Sun visible in dark mode */
+
+/* Equal Height Cards Utility */
+.swiper-slide {
+  height: auto !important;
+  display: flex !important;
+  align-items: stretch;
+}
+
+.swiper-slide > div {
+  width: 100%;
+}
+
+/* Ensure glass cards in grids also stretch */
+.grid > .glass, .grid > div > .glass {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scroll Top Button */
+#scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateY(20px) scale(0.8);
+}
+
+#scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+#scroll-top:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 20px rgba(2, 132, 199, 0.4);
+}
+

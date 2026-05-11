@@ -30,68 +30,21 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-300">
-
-    <!-- Navbar -->
-    <nav id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent py-4">
-        <div class="w-full px-4">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <a href="index.html" class="flex items-center gap-2 text-2xl font-bold tracking-tighter">
-                    <i class="ph-fill ph-paper-plane-tilt text-primary text-3xl"></i>
-                    <span class="text-slate-900 dark:text-white drop-shadow-md">Aero<span class="text-primary">Glide</span></span>
-                </a>
-
-                <!-- Desktop Menu -->
-                <div class="hidden lg:flex items-center gap-8">
-                    <a href="index.html" class="text-slate-800 dark:text-white hover:text-primary font-medium transition-colors">Home</a>
-                    <a href="index-2.html" class="text-slate-800 dark:text-white hover:text-primary font-medium transition-colors">Home 2</a>
-                    <a href="about.html" class="text-slate-800 dark:text-white hover:text-primary font-medium transition-colors">About</a>
-                    <a href="services.html" class="text-slate-800 dark:text-white hover:text-primary font-medium transition-colors">Services</a>
-                    <a href="pricing.html" class="text-slate-800 dark:text-white hover:text-primary font-medium transition-colors">Pricing</a>
-                    <a href="contact.html" class="text-slate-800 dark:text-white hover:text-primary font-medium transition-colors">Contact</a>
-                </div>
-
-                <!-- Actions -->
-                <div class="flex items-center gap-2 lg:gap-4">
-                    <button id="rtl-toggle" class="p-2 rounded-full glass hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-slate-800 dark:text-white" aria-label="Toggle RTL">
-                        <span class="font-bold text-sm">RTL</span>
-                    </button>
-                    <button id="theme-toggle" class="p-2 rounded-full glass hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-slate-800 dark:text-white" aria-label="Toggle Theme">
-                        <i class="ph ph-moon text-xl dark-mode-icon"></i>
-                        <i class="ph ph-sun text-xl light-mode-icon text-yellow-300"></i>
-                    </button>
-                    <a href="booking.html" class="hidden lg:flex btn-premium bg-primary text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-primary/30 hover:-translate-y-1 transition-transform">
-                        Book Now
-                    </a>
-
-                    <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-800 dark:text-white z-[100] relative">
-                        <i class="ph ph-list text-3xl menu-icon"></i>
-                        <i class="ph ph-x text-3xl close-icon hidden"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 !bg-white dark:!bg-slate-900 shadow-2xl transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-center items-center px-6 z-[80]">
-        <a href="index.html" class="py-4 text-2xl font-bold border-b border-slate-100 dark:border-slate-800 text-slate-800 dark:text-slate-100 w-full text-center">Home</a>
-        <a href="index-2.html" class="py-4 text-2xl font-bold border-b border-slate-100 dark:border-slate-800 text-slate-800 dark:text-slate-100 w-full text-center">Home 2</a>
-        <a href="about.html" class="py-4 text-2xl font-bold border-b border-slate-100 dark:border-slate-800 text-slate-800 dark:text-slate-100 w-full text-center">About</a>
-        <a href="services.html" class="py-4 text-2xl font-bold border-b border-slate-100 dark:border-slate-800 text-slate-800 dark:text-slate-100 w-full text-center">Services</a>
-        <a href="pricing.html" class="py-4 text-2xl font-bold border-b border-slate-100 dark:border-slate-800 text-slate-800 dark:text-slate-100 w-full text-center">Pricing</a>
-        <a href="contact.html" class="py-4 text-2xl font-bold border-b border-slate-100 dark:border-slate-800 text-slate-800 dark:text-slate-100 w-full text-center">Contact</a>
-        
-        <a href="booking.html" class="mt-8 bg-primary text-white text-center py-4 rounded-xl font-bold shadow-lg shadow-primary/20 w-full text-xl">Book Now</a>
-    </div>
+<body class="bg-slate-50 dark:bg-slate-900 text-black dark:text-slate-100 transition-colors duration-300">
+    
+    <!-- Simple Header -->
+    <header class="py-10 flex justify-center" data-aos="fade-down">
+        <a href="index.html" class="flex items-center gap-2 text-3xl font-bold tracking-tighter">
+            <i class="ph-fill ph-paper-plane-tilt text-primary text-4xl"></i>
+            <span class="text-black dark:text-white drop-shadow-md">Aero<span class="text-primary">Glide</span></span>
+        </a>
+    </header>
 
     <!-- Booking Hero -->
-    <section class="pt-32 pb-10 bg-white dark:bg-slate-900 text-slate-900 dark:text-white relative overflow-hidden border-b border-slate-100 dark:border-slate-800">
+    <section class="pb-10 bg-white dark:bg-slate-900 text-black dark:text-white relative overflow-hidden border-b border-slate-100 dark:border-slate-800">
         <div class="container mx-auto px-6 relative z-10 text-center">
             <h1 class="text-4xl md:text-5xl font-black mb-4 uppercase tracking-tight" data-aos="fade-up">Reserve Your <span class="text-primary">Flight</span></h1>
-            <p class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+            <p class="text-black dark:text-slate-400 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
                 Complete the form below to secure your tandem adventure with our elite pilot team.
             </p>
         </div>
@@ -104,90 +57,96 @@
                 <!-- Left: Form Steps -->
                 <div class="lg:col-span-2 space-y-12">
                     
-                    <!-- Step 1: Activity Selection -->
-                    <div class="glass p-8 rounded-3xl" data-aos="fade-up">
-                        <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
-                            <i class="ph ph-parachute text-primary"></i> 1. Choose Your Experience
-                        </h2>
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <!-- Option Paragliding -->
-                            <label class="relative cursor-pointer group">
-                                <input type="radio" name="flight_type" class="peer hidden" checked>
-                                <div class="p-6 rounded-2xl border-2 border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-800 peer-checked:border-primary peer-checked:bg-primary/5 transition-all">
-                                    <div class="flex justify-between items-start mb-4">
-                                        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                                            <i class="ph-fill ph-parachute text-2xl"></i>
+                    <div class="glass p-8 rounded-3xl space-y-12" data-aos="fade-up">
+                        <!-- Step 1: Activity Selection -->
+                        <div>
+                            <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                                <i class="ph ph-parachute text-primary"></i> 1. Choose Your Experience
+                            </h2>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <!-- Option Paragliding -->
+                                <label class="relative cursor-pointer group">
+                                    <input type="radio" name="flight_type" class="peer hidden" checked>
+                                    <div class="p-6 rounded-2xl border-2 border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-800 peer-checked:border-primary peer-checked:bg-primary/5 transition-all">
+                                        <div class="flex justify-between items-start mb-4">
+                                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                                                <i class="ph-fill ph-parachute text-2xl"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full border-2 border-slate-200 dark:border-slate-700 peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center">
+                                                <div class="w-2.5 h-2.5 rounded-full bg-white opacity-0 peer-checked:opacity-100"></div>
+                                            </div>
                                         </div>
-                                        <div class="w-6 h-6 rounded-full border-2 border-slate-200 dark:border-slate-700 peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center">
-                                            <div class="w-2.5 h-2.5 rounded-full bg-white opacity-0 peer-checked:opacity-100"></div>
-                                        </div>
+                                        <h3 class="font-bold text-lg mb-1 text-black dark:text-white">Tandem Paragliding</h3>
+                                        <p class="text-sm text-black dark:text-slate-400 mb-4">Serene and relaxing soaring experience.</p>
+                                        <span class="text-xl font-bold text-primary">$199</span>
                                     </div>
-                                    <h3 class="font-bold text-lg mb-1">Tandem Paragliding</h3>
-                                    <p class="text-sm text-slate-500 mb-4">Serene and relaxing soaring experience.</p>
-                                    <span class="text-xl font-bold text-primary">$199</span>
-                                </div>
-                            </label>
+                                </label>
 
-                            <!-- Option Hang Gliding -->
-                            <label class="relative cursor-pointer group">
-                                <input type="radio" name="flight_type" class="peer hidden">
-                                <div class="p-6 rounded-2xl border-2 border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-800 peer-checked:border-primary peer-checked:bg-primary/5 transition-all">
-                                    <div class="flex justify-between items-start mb-4">
-                                        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
-                                            <i class="ph-fill ph-airplane-tilt text-2xl"></i>
+                                <!-- Option Hang Gliding -->
+                                <label class="relative cursor-pointer group">
+                                    <input type="radio" name="flight_type" class="peer hidden">
+                                    <div class="p-6 rounded-2xl border-2 border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-800 peer-checked:border-primary peer-checked:bg-primary/5 transition-all">
+                                        <div class="flex justify-between items-start mb-4">
+                                            <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
+                                                <i class="ph-fill ph-airplane-tilt text-2xl"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full border-2 border-slate-200 dark:border-slate-700 peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center">
+                                                <div class="w-2.5 h-2.5 rounded-full bg-white opacity-0 peer-checked:opacity-100"></div>
+                                            </div>
                                         </div>
-                                        <div class="w-6 h-6 rounded-full border-2 border-slate-200 dark:border-slate-700 peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center">
-                                            <div class="w-2.5 h-2.5 rounded-full bg-white opacity-0 peer-checked:opacity-100"></div>
-                                        </div>
+                                        <h3 class="font-bold text-lg mb-1 text-black dark:text-white">Hang Gliding</h3>
+                                        <p class="text-sm text-black dark:text-slate-400 mb-4">Fast-paced, bird-like aerodynamic flight.</p>
+                                        <span class="text-xl font-bold text-accent">$249</span>
                                     </div>
-                                    <h3 class="font-bold text-lg mb-1">Hang Gliding</h3>
-                                    <p class="text-sm text-slate-500 mb-4">Fast-paced, bird-like aerodynamic flight.</p>
-                                    <span class="text-xl font-bold text-accent">$249</span>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Step 2: Date & Time -->
-                    <div class="glass p-8 rounded-3xl" data-aos="fade-up">
-                        <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
-                            <i class="ph ph-calendar text-primary"></i> 2. Date & Preferred Time
-                        </h2>
-                        <div class="grid md:grid-cols-2 gap-8">
-                            <div>
-                                <label class="block text-sm font-bold text-slate-500 uppercase tracking-widest mb-2">Flight Date</label>
-                                <input type="date" class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:border-primary outline-none">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-bold text-slate-500 uppercase tracking-widest mb-2">Time Slot</label>
-                                <div class="grid grid-cols-2 gap-3">
-                                    <button class="py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-primary transition-colors text-sm font-bold">Morning (08-11)</button>
-                                    <button class="py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800 hover:border-primary transition-colors text-sm font-bold">Midday (11-14)</button>
-                                    <button class="py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800 hover:border-primary transition-colors text-sm font-bold">Afternoon (14-17)</button>
-                                    <button class="py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800 hover:border-primary transition-colors text-sm font-bold">Sunset (17-19)</button>
-                                </div>
+                                </label>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Step 3: Passenger Details -->
-                    <div class="glass p-8 rounded-3xl" data-aos="fade-up">
-                        <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
-                            <i class="ph ph-user-focus text-primary"></i> 3. Passenger Details
-                        </h2>
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm font-bold text-slate-500 uppercase tracking-widest mb-2">Full Name</label>
-                                <input type="text" placeholder="John Doe" class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:border-primary outline-none">
+                        <hr class="border-slate-100 dark:border-slate-800">
+
+                        <!-- Step 2: Date & Time -->
+                        <div>
+                            <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                                <i class="ph ph-calendar text-primary"></i> 2. Date & Preferred Time
+                            </h2>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <label class="block text-sm font-bold text-black dark:text-slate-500 uppercase tracking-widest mb-2">Flight Date</label>
+                                    <input type="date" class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:border-primary outline-none text-black dark:text-white">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-black dark:text-slate-500 uppercase tracking-widest mb-2">Time Slot</label>
+                                    <div class="grid grid-cols-2 gap-3">
+                                        <button class="py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-primary transition-colors text-sm font-bold text-black dark:text-white">Morning (08-11)</button>
+                                        <button class="py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-primary transition-colors text-sm font-bold text-black dark:text-white">Midday (11-14)</button>
+                                        <button class="py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-primary transition-colors text-sm font-bold text-black dark:text-white">Afternoon (14-17)</button>
+                                        <button class="py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-primary transition-colors text-sm font-bold text-black dark:text-white">Sunset (17-19)</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <label class="block text-sm font-bold text-slate-500 uppercase tracking-widest mb-2">Weight (kg)</label>
-                                <input type="number" placeholder="75" class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:border-primary outline-none">
-                                <p class="text-[10px] text-slate-500 mt-1">Required for wing sizing and safety.</p>
-                            </div>
-                            <div class="md:col-span-2">
-                                <label class="block text-sm font-bold text-slate-500 uppercase tracking-widest mb-2">Email Address</label>
-                                <input type="email" placeholder="john@example.com" class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:border-primary outline-none">
+                        </div>
+
+                        <hr class="border-slate-100 dark:border-slate-800">
+
+                        <!-- Step 3: Passenger Details -->
+                        <div>
+                            <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                                <i class="ph ph-user-focus text-primary"></i> 3. Passenger Details
+                            </h2>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-bold text-black dark:text-slate-500 uppercase tracking-widest mb-2">Full Name</label>
+                                    <input type="text" placeholder="John Doe" class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:border-primary outline-none text-black dark:text-white">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-black dark:text-slate-500 uppercase tracking-widest mb-2">Weight (kg)</label>
+                                    <input type="number" placeholder="75" class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:border-primary outline-none text-black dark:text-white">
+                                    <p class="text-[10px] text-black dark:text-slate-500 mt-1">Required for wing sizing and safety.</p>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-bold text-black dark:text-slate-500 uppercase tracking-widest mb-2">Email Address</label>
+                                    <input type="email" placeholder="john@example.com" class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:border-primary outline-none text-black dark:text-white">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -202,19 +161,19 @@
                             <h3 class="text-xl font-bold mb-6 border-b border-slate-200 dark:border-slate-800 pb-4">Booking Summary</h3>
                             <div class="space-y-4 mb-8">
                                 <div class="flex justify-between text-sm">
-                                    <span class="text-slate-500">Experience:</span>
+                                    <span class="text-black dark:text-slate-400">Experience:</span>
                                     <span class="font-bold">Tandem Paragliding</span>
                                 </div>
                                 <div class="flex justify-between text-sm">
-                                    <span class="text-slate-500">Date:</span>
+                                    <span class="text-black dark:text-slate-400">Date:</span>
                                     <span class="font-bold">May 24, 2026</span>
                                 </div>
                                 <div class="flex justify-between text-sm">
-                                    <span class="text-slate-500">Price:</span>
+                                    <span class="text-black dark:text-slate-400">Price:</span>
                                     <span class="font-bold">$199.00</span>
                                 </div>
                                 <div class="flex justify-between text-sm">
-                                    <span class="text-slate-500">Taxes:</span>
+                                    <span class="text-black dark:text-slate-400">Taxes:</span>
                                     <span class="font-bold">$15.92</span>
                                 </div>
                             </div>
@@ -225,7 +184,7 @@
                             <button class="w-full bg-primary text-white py-4 rounded-2xl font-bold text-lg shadow-lg shadow-primary/30 hover:scale-[1.02] transition-transform flex items-center justify-center gap-2">
                                 Confirm & Pay <i class="ph ph-arrow-right"></i>
                             </button>
-                            <p class="text-[10px] text-center text-slate-500 mt-4 px-4 leading-tight">
+                            <p class="text-[10px] text-center text-black dark:text-slate-500 mt-4 px-4 leading-tight">
                                 By clicking "Confirm & Pay", you agree to our <a href="#" class="underline">Safety Waiver</a> and <a href="#" class="underline">Cancellation Policy</a>.
                             </p>
                         </div>
@@ -233,10 +192,10 @@
                         <!-- Need Help? -->
                         <div class="glass p-6 rounded-3xl text-center">
                             <div class="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="ph ph-chat-centered-text text-2xl text-slate-500"></i>
+                                <i class="ph ph-chat-centered-text text-2xl text-black dark:text-white"></i>
                             </div>
                             <h4 class="font-bold mb-2">Need help booking?</h4>
-                            <p class="text-sm text-slate-500 mb-4">Talk to a flight specialist.</p>
+                            <p class="text-sm text-black dark:text-slate-400 mb-4">Talk to a flight specialist.</p>
                             <a href="contact.html" class="text-primary font-bold hover:underline">+1 (234) 567-890</a>
                         </div>
                     </div>
@@ -245,58 +204,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-300 py-16 border-t border-slate-800 text-center md:text-left">
-        <div class="w-full px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-                <div class="md:col-span-1">
-                    <a href="index.html" class="flex items-center justify-center md:justify-start gap-2 text-2xl font-bold tracking-tighter mb-6">
-                        <i class="ph-fill ph-paper-plane-tilt text-primary"></i>
-                        <span class="text-white drop-shadow-md">Aero<span class="text-primary">Glide</span></span>
-                    </a>
-                    <p class="text-sm text-slate-400 mb-6">Premium tandem paragliding and hang gliding experiences operating from world-class launch sites.</p>
-                    <div class="flex justify-center md:justify-start space-x-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary text-white transition-colors"><i class="ph-fill ph-facebook-logo"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary text-white transition-colors"><i class="ph-fill ph-instagram-logo"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary text-white transition-colors"><i class="ph-fill ph-youtube-logo"></i></a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
-                        <li><a href="index-2.html" class="hover:text-primary transition-colors">Home 2</a></li>
-                        <li><a href="services.html" class="hover:text-primary transition-colors">Experiences</a></li>
-                        <li><a href="pricing.html" class="hover:text-primary transition-colors">Pricing & Book</a></li>
-                    </ul>
-                </div>
 
-                <div>
-                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Support</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact Us</a></li>
-                        <li><a href="service-details.html#faq" class="hover:text-primary transition-colors">FAQs</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Online Waiver</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Terms & Conditions</a></li>
-                    </ul>
-                </div>
 
-                <div>
-                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Newsletter</h4>
-                    <p class="text-sm mb-4">Subscribe for seasonal discounts and weather alerts.</p>
-                    <form class="flex">
-                        <input type="email" placeholder="Your email" class="bg-slate-800 text-white px-4 py-2 rounded-l-md w-full focus:outline-none focus:ring-1 focus:ring-primary border border-slate-700">
-                        <button type="submit" class="bg-primary text-white px-4 py-2 rounded-r-md hover:bg-primary-dark transition-colors"><i class="ph-bold ph-paper-plane-right"></i></button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="border-t border-slate-800 pt-8 flex justify-center items-center gap-4 text-sm text-slate-500 text-center">
-                <p>&copy; 2026 AeroGlide Aviation. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Scroll Top -->
+    <button id="scroll-top" class="bg-primary text-white shadow-lg" aria-label="Scroll to Top">
+        <i class="ph-bold ph-caret-up"></i>
+    </button>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>
