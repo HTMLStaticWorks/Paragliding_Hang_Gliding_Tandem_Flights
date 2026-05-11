@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | AeroGlide</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0284c7',
+                        'primary-dark': '#0369a1',
+                        accent: '#ea580c',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav id="main-header" class="fixed w-full z-50 transition-all duration-300 glass py-4">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2 text-2xl font-bold tracking-tighter">
+                    <i class="ph-fill ph-paper-plane-tilt text-primary text-3xl"></i>
+                    <span class="text-slate-900 dark:text-white drop-shadow-md">Aero<span class="text-primary">Glide</span></span>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-slate-700 dark:text-slate-200 hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="index-2.html" class="text-slate-700 dark:text-slate-200 hover:text-primary font-medium transition-colors">Niche Tour</a>
+                    <a href="about.html" class="text-slate-700 dark:text-slate-200 hover:text-primary font-medium transition-colors">About</a>
+                    <a href="services.html" class="text-primary font-medium transition-colors">Services</a>
+                    <a href="pricing.html" class="text-slate-700 dark:text-slate-200 hover:text-primary font-medium transition-colors">Pricing</a>
+                    <a href="contact.html" class="text-slate-700 dark:text-slate-200 hover:text-primary font-medium transition-colors">Contact</a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button id="rtl-toggle" class="p-2 rounded-full glass hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle RTL">
+                        <span class="font-bold text-sm">EN/AR</span>
+                    </button>
+                    <button id="theme-toggle" class="p-2 rounded-full glass hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle Theme">
+                        <i class="ph ph-moon text-xl dark-mode-icon"></i>
+                        <i class="ph ph-sun text-xl light-mode-icon hidden dark:block text-yellow-300"></i>
+                    </button>
+                    <a href="pricing.html" class="btn-premium bg-primary text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-primary/30">
+                        Book Now
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden p-2 z-50 relative text-slate-800 dark:text-white">
+                    <div class="w-6 h-5 flex flex-col justify-between">
+                        <span class="w-full h-0.5 bg-current transform transition-transform duration-300"></span>
+                        <span class="w-full h-0.5 bg-current transition-opacity duration-300"></span>
+                        <span class="w-full h-0.5 bg-current transform transition-transform duration-300"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-32 pb-12 bg-slate-50 dark:bg-slate-900 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Our <span class="text-primary">Experiences</span></h1>
+        <p class="text-slate-600 dark:text-slate-400">Choose your path to the sky.</p>
+    </div>
+
+    <!-- 1. Paragliding Flights -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl relative group">
+                        <img src="assets/images/tandem_flight_closeup_1778495996469.png" alt="Paragliding" class="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-primary/10"></div>
+                        <div class="absolute top-6 right-6 bg-white dark:bg-slate-900 text-primary w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-xl">
+                            <i class="ph-fill ph-parachute"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Tandem <span class="text-primary">Paragliding</span></h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                        Sit comfortably in a secure harness in front of your pilot. This is the most serene and accessible way to experience free flight. Enjoy sweeping views, gentle turns, and a smooth landing on your feet.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <i class="ph-bold ph-check text-primary text-xl"></i>
+                            <span class="font-medium text-slate-700 dark:text-slate-300">Duration: 20-30 minutes airtime</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ph-bold ph-check text-primary text-xl"></i>
+                            <span class="font-medium text-slate-700 dark:text-slate-300">Intensity: Relaxing to Moderate</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ph-bold ph-check text-primary text-xl"></i>
+                            <span class="font-medium text-slate-700 dark:text-slate-300">Age Limit: 6+ Years</span>
+                        </li>
+                    </ul>
+                    <a href="service-details.html" class="btn-premium bg-primary text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transition-all inline-block">
+                        Explore Paragliding
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Hang Gliding Flights -->
+    <section class="py-20 bg-slate-100 dark:bg-slate-800/50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row-reverse gap-12 items-center">
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl relative group">
+                        <img src="assets/images/hang_gliding_valley_1778495978898.png" alt="Hang Gliding" class="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-accent/10"></div>
+                        <div class="absolute top-6 left-6 bg-white dark:bg-slate-900 text-accent w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-xl">
+                            <i class="ph-fill ph-paper-plane-tilt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Tandem <span class="text-accent">Hang Gliding</span></h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                        Fly prone (face down) strapped side-by-side with your pilot. Hang gliding offers higher speeds, sharper handling, and a true "Superman" flying sensation over the valley.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <i class="ph-bold ph-check text-accent text-xl"></i>
+                            <span class="font-medium text-slate-700 dark:text-slate-300">Duration: 15-25 minutes airtime</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ph-bold ph-check text-accent text-xl"></i>
+                            <span class="font-medium text-slate-700 dark:text-slate-300">Intensity: High (Adrenaline)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ph-bold ph-check text-accent text-xl"></i>
+                            <span class="font-medium text-slate-700 dark:text-slate-300">Age Limit: 12+ Years</span>
+                        </li>
+                    </ul>
+                    <a href="service-details.html" class="btn-premium bg-accent text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transition-all inline-block">
+                        Explore Hang Gliding
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Gift Packages -->
+    <section id="gifts" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-slate-900"></div>
+        <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-l from-primary/20 to-transparent"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 text-white">Gift <span class="text-primary">Packages</span></h2>
+                <p class="text-slate-400 text-lg">The perfect gift for adrenaline junkies, anniversaries, or milestone birthdays.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Digital Gift -->
+                <div class="glass bg-white/10 p-10 rounded-3xl border border-white/20 hover:border-primary transition-colors text-white" data-aos="zoom-in">
+                    <i class="ph-bold ph-envelope-open text-5xl text-primary mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Digital E-Voucher</h3>
+                    <p class="text-slate-400 mb-8">Delivered instantly to their inbox. Valid for 12 months. Fully transferable.</p>
+                    <div class="flex justify-between items-center border-t border-white/10 pt-6">
+                        <span class="text-3xl font-bold">$199<span class="text-sm text-slate-400 font-normal"> /base</span></span>
+                        <button class="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-bold transition-colors">Buy Digital</button>
+                    </div>
+                </div>
+                <!-- Physical Gift -->
+                <div class="glass bg-white/10 p-10 rounded-3xl border border-white/20 hover:border-primary transition-colors text-white relative overflow-hidden" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="absolute top-4 right-4 bg-primary text-xs font-bold px-3 py-1 rounded-full">PREMIUM</div>
+                    <i class="ph-bold ph-package text-5xl text-primary mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Premium Box Set</h3>
+                    <p class="text-slate-400 mb-8">A physical metallic voucher delivered in a premium presentation box with AeroGlide merch.</p>
+                    <div class="flex justify-between items-center border-t border-white/10 pt-6">
+                        <span class="text-3xl font-bold">$229<span class="text-sm text-slate-400 font-normal"> /base</span></span>
+                        <button class="bg-white hover:bg-slate-200 text-slate-900 px-6 py-2 rounded-full font-bold transition-colors">Buy Physical</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Video Add-ons -->
+    <section class="py-24 bg-white dark:bg-slate-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Media <span class="text-primary">Add-ons</span></h2>
+                <p class="text-slate-600 dark:text-slate-400 text-lg">If there's no video, did it really happen? Add media packages to any flight.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Addon 1 -->
+                <div class="glass p-8 rounded-2xl text-center border border-slate-200 dark:border-slate-800" data-aos="fade-up" data-aos-delay="0">
+                    <i class="ph-bold ph-camera text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Raw GoPro Footage</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Unedited 4K footage delivered directly to your phone post-flight.</p>
+                    <p class="text-2xl font-bold text-slate-900 dark:text-white">$39</p>
+                </div>
+                <!-- Addon 2 -->
+                <div class="glass p-8 rounded-2xl text-center border-2 border-primary relative shadow-xl shadow-primary/20" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-white text-xs font-bold px-4 py-1 rounded-full">MOST POPULAR</div>
+                    <i class="ph-bold ph-video-camera text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Edited Reel + Photos</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">A professionally edited 60-second social media reel with music.</p>
+                    <p class="text-2xl font-bold text-slate-900 dark:text-white">$59</p>
+                </div>
+                <!-- Addon 3 -->
+                <div class="glass p-8 rounded-2xl text-center border border-slate-200 dark:border-slate-800" data-aos="fade-up" data-aos-delay="200">
+                    <i class="ph-bold ph-camera-rotate text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Insta360 Experience</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Full 360-degree interactive video. Look anywhere during your flight.</p>
+                    <p class="text-2xl font-bold text-slate-900 dark:text-white">$89</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Footer for Template consistency -->
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm border-t border-slate-800">
+        <p>&copy; 2026 AeroGlide Aviation. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

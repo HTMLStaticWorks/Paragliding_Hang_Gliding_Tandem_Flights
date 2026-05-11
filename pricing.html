@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Booking | AeroGlide</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0284c7',
+                        'primary-dark': '#0369a1',
+                        accent: '#ea580c',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav id="main-header" class="fixed w-full z-50 transition-all duration-300 glass py-4">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2 text-2xl font-bold tracking-tighter">
+                    <i class="ph-fill ph-paper-plane-tilt text-primary text-3xl"></i>
+                    <span class="text-slate-900 dark:text-white drop-shadow-md">Aero<span class="text-primary">Glide</span></span>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-slate-700 dark:text-slate-200 hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="index-2.html" class="text-slate-700 dark:text-slate-200 hover:text-primary font-medium transition-colors">Niche Tour</a>
+                    <a href="about.html" class="text-slate-700 dark:text-slate-200 hover:text-primary font-medium transition-colors">About</a>
+                    <a href="services.html" class="text-slate-700 dark:text-slate-200 hover:text-primary font-medium transition-colors">Services</a>
+                    <a href="pricing.html" class="text-primary font-medium transition-colors">Pricing</a>
+                    <a href="contact.html" class="text-slate-700 dark:text-slate-200 hover:text-primary font-medium transition-colors">Contact</a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button id="rtl-toggle" class="p-2 rounded-full glass hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle RTL">
+                        <span class="font-bold text-sm">EN/AR</span>
+                    </button>
+                    <button id="theme-toggle" class="p-2 rounded-full glass hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle Theme">
+                        <i class="ph ph-moon text-xl dark-mode-icon"></i>
+                        <i class="ph ph-sun text-xl light-mode-icon hidden dark:block text-yellow-300"></i>
+                    </button>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden p-2 z-50 relative text-slate-800 dark:text-white">
+                    <div class="w-6 h-5 flex flex-col justify-between">
+                        <span class="w-full h-0.5 bg-current transform transition-transform duration-300"></span>
+                        <span class="w-full h-0.5 bg-current transition-opacity duration-300"></span>
+                        <span class="w-full h-0.5 bg-current transform transition-transform duration-300"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-32 pb-12 bg-slate-50 dark:bg-slate-900 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Transparent <span class="text-primary">Pricing</span></h1>
+        <p class="text-slate-600 dark:text-slate-400">No hidden fees. Just pure adventure.</p>
+    </div>
+
+    <!-- 1. Pricing Cards -->
+    <section class="py-16 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Paragliding -->
+                <div class="glass p-10 rounded-3xl border border-slate-200 dark:border-slate-800 hover:border-primary dark:hover:border-primary transition-all duration-300 bg-white dark:bg-slate-800 relative group" data-aos="fade-right">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Tandem Paragliding</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm">Classic soaring experience</p>
+                        </div>
+                        <i class="ph-fill ph-parachute text-4xl text-primary"></i>
+                    </div>
+                    <div class="mb-8">
+                        <span class="text-5xl font-black">$199</span>
+                        <span class="text-slate-500 dark:text-slate-400">/person</span>
+                    </div>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+                            <i class="ph-bold ph-check text-primary"></i> 20-30 Mins Flight Time
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+                            <i class="ph-bold ph-check text-primary"></i> Pre-flight Safety Briefing
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+                            <i class="ph-bold ph-check text-primary"></i> Helmet & Harness Provided
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300 opacity-50">
+                            <i class="ph-bold ph-x"></i> Digital Media Package
+                        </li>
+                    </ul>
+                    <button class="w-full btn-premium bg-primary text-white py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all">
+                        Book Paragliding
+                    </button>
+                </div>
+
+                <!-- Hang Gliding -->
+                <div class="glass p-10 rounded-3xl border-2 border-accent transition-all duration-300 bg-white dark:bg-slate-800 relative shadow-xl shadow-accent/10 group" data-aos="fade-left">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-accent text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">Ultimate Thrill</div>
+                    <div class="flex justify-between items-start mb-6 mt-2">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Tandem Hang Gliding</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm">High-speed aerodynamic flight</p>
+                        </div>
+                        <i class="ph-fill ph-paper-plane-tilt text-4xl text-accent"></i>
+                    </div>
+                    <div class="mb-8">
+                        <span class="text-5xl font-black">$249</span>
+                        <span class="text-slate-500 dark:text-slate-400">/person</span>
+                    </div>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+                            <i class="ph-bold ph-check text-accent"></i> 15-25 Mins Flight Time
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+                            <i class="ph-bold ph-check text-accent"></i> Pre-flight Safety Briefing
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+                            <i class="ph-bold ph-check text-accent"></i> Aerodynamic Suit Provided
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+                            <i class="ph-bold ph-check text-accent"></i> Optional Acro Maneuvers
+                        </li>
+                    </ul>
+                    <button class="w-full btn-premium bg-accent text-white py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all">
+                        Book Hang Gliding
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Flight Comparison -->
+    <section class="py-24 bg-slate-100 dark:bg-slate-800/50">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4">Not sure which to choose?</h2>
+                <p class="text-slate-600 dark:text-slate-400">Compare the experiences side-by-side.</p>
+            </div>
+
+            <div class="overflow-x-auto rounded-2xl glass border border-slate-200 dark:border-slate-700 shadow-lg" data-aos="fade-up">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-200 dark:bg-slate-800">
+                            <th class="p-4 font-bold text-lg border-b border-slate-300 dark:border-slate-700">Feature</th>
+                            <th class="p-4 font-bold text-lg text-primary border-b border-slate-300 dark:border-slate-700">Paragliding</th>
+                            <th class="p-4 font-bold text-lg text-accent border-b border-slate-300 dark:border-slate-700">Hang Gliding</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 dark:divide-slate-700 bg-white dark:bg-slate-900">
+                        <tr>
+                            <td class="p-4 font-medium text-slate-600 dark:text-slate-400">Passenger Position</td>
+                            <td class="p-4">Seated upright (comfortable)</td>
+                            <td class="p-4">Prone / Face down (dynamic)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium text-slate-600 dark:text-slate-400">Flight Speed</td>
+                            <td class="p-4">Slow & Serene (20-40 km/h)</td>
+                            <td class="p-4">Fast & Agile (40-80 km/h)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium text-slate-600 dark:text-slate-400">Takeoff Method</td>
+                            <td class="p-4">Brisk walk / short jog</td>
+                            <td class="p-4">Fast run to the edge</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium text-slate-600 dark:text-slate-400">Weight Limits</td>
+                            <td class="p-4">40kg to 110kg</td>
+                            <td class="p-4">45kg to 95kg</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium text-slate-600 dark:text-slate-400">Vibe</td>
+                            <td class="p-4">Floating like a cloud</td>
+                            <td class="p-4">Flying like a bird</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Add-ons -->
+    <section class="py-24 relative overflow-hidden bg-white dark:bg-slate-900">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Optional <span class="text-primary">Upgrades</span></h2>
+            
+            <div class="space-y-6">
+                <!-- Addon -->
+                <div class="flex flex-col sm:flex-row justify-between items-center glass p-6 rounded-2xl border border-slate-200 dark:border-slate-800 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex items-center gap-6 mb-4 sm:mb-0 text-center sm:text-left">
+                        <div class="bg-blue-100 dark:bg-blue-900/50 p-4 rounded-xl text-primary hidden sm:block">
+                            <i class="ph-bold ph-video-camera text-3xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold">Standard Media Package</h4>
+                            <p class="text-slate-500 text-sm">Raw 4K footage + 10 high-res photos</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <span class="text-2xl font-bold">+$39</span>
+                        <button class="text-primary border border-primary px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-colors text-sm font-bold">Select</button>
+                    </div>
+                </div>
+
+                <!-- Addon -->
+                <div class="flex flex-col sm:flex-row justify-between items-center glass p-6 rounded-2xl border-2 border-primary/50 bg-primary/5 dark:bg-primary/10 hover:shadow-md transition-shadow relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute -top-3 left-6 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full">POPULAR</div>
+                    <div class="flex items-center gap-6 mb-4 sm:mb-0 text-center sm:text-left">
+                        <div class="bg-primary p-4 rounded-xl text-white hidden sm:block">
+                            <i class="ph-bold ph-film-strip text-3xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold">Premium Social Media Edit</h4>
+                            <p class="text-slate-500 text-sm">Professionally edited 60s vertical reel with music</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <span class="text-2xl font-bold">+$59</span>
+                        <button class="bg-primary text-white px-4 py-1.5 rounded-full hover:bg-primary-dark transition-colors text-sm font-bold">Select</button>
+                    </div>
+                </div>
+
+                <!-- Addon -->
+                <div class="flex flex-col sm:flex-row justify-between items-center glass p-6 rounded-2xl border border-slate-200 dark:border-slate-800 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-6 mb-4 sm:mb-0 text-center sm:text-left">
+                        <div class="bg-slate-100 dark:bg-slate-800 p-4 rounded-xl text-slate-600 dark:text-slate-400 hidden sm:block">
+                            <i class="ph-bold ph-t-shirt text-3xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold">AeroGlide Tech Tee</h4>
+                            <p class="text-slate-500 text-sm">Moisture-wicking commemorative flight shirt</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <span class="text-2xl font-bold">+$25</span>
+                        <button class="text-slate-600 dark:text-slate-400 border border-slate-300 dark:border-slate-700 px-4 py-1.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-sm font-bold">Select</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FAQs -->
+    <section class="py-24 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Booking <span class="text-primary">FAQ</span></h2>
+            
+            <div class="space-y-4" data-aos="fade-up">
+                <!-- FAQ Item 1 -->
+                <details class="glass group rounded-xl p-6 bg-white dark:bg-slate-800 transition-colors border border-slate-100 dark:border-slate-700">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer text-lg outline-none">
+                        Do I need to pay the full amount upfront?
+                        <span class="transition group-open:rotate-180 text-primary">
+                            <i class="ph-bold ph-caret-down"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+                        No. We require a 20% deposit to secure your booking. The remainder can be paid on the day of the flight via card or cash.
+                    </div>
+                </details>
+                
+                <!-- FAQ Item 2 -->
+                <details class="glass group rounded-xl p-6 bg-white dark:bg-slate-800 transition-colors border border-slate-100 dark:border-slate-700">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer text-lg outline-none">
+                        What is the cancellation policy?
+                        <span class="transition group-open:rotate-180 text-primary">
+                            <i class="ph-bold ph-caret-down"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+                        You can cancel or reschedule for free up to 48 hours before your flight. Cancellations within 48 hours will forfeit the 20% deposit. If WE cancel due to weather, you get a full refund or free reschedule.
+                    </div>
+                </details>
+
+                <!-- FAQ Item 3 -->
+                <details class="glass group rounded-xl p-6 bg-white dark:bg-slate-800 transition-colors border border-slate-100 dark:border-slate-700">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer text-lg outline-none">
+                        Are group discounts available?
+                        <span class="transition group-open:rotate-180 text-primary">
+                            <i class="ph-bold ph-caret-down"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+                        Yes! We offer a 10% discount for groups of 4 or more booking together on the same day. Contact us directly to arrange a group booking.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Footer for Template consistency -->
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm border-t border-slate-800">
+        <p>&copy; 2026 AeroGlide Aviation. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

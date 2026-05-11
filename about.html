@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | AeroGlide</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0284c7',
+                        'primary-dark': '#0369a1',
+                        accent: '#ea580c',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+
+    <!-- Navbar (Same as index.html for consistency) -->
+    <nav id="main-header" class="fixed w-full z-50 transition-all duration-300 glass py-4">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2 text-2xl font-bold tracking-tighter">
+                    <i class="ph-fill ph-paper-plane-tilt text-primary text-3xl"></i>
+                    <span class="text-slate-900 dark:text-white drop-shadow-md">Aero<span class="text-primary">Glide</span></span>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-slate-700 dark:text-slate-200 hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="index-2.html" class="text-slate-700 dark:text-slate-200 hover:text-primary font-medium transition-colors">Niche Tour</a>
+                    <a href="about.html" class="text-primary font-medium transition-colors">About</a>
+                    <a href="services.html" class="text-slate-700 dark:text-slate-200 hover:text-primary font-medium transition-colors">Services</a>
+                    <a href="pricing.html" class="text-slate-700 dark:text-slate-200 hover:text-primary font-medium transition-colors">Pricing</a>
+                    <a href="contact.html" class="text-slate-700 dark:text-slate-200 hover:text-primary font-medium transition-colors">Contact</a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button id="rtl-toggle" class="p-2 rounded-full glass hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle RTL">
+                        <span class="font-bold text-sm">EN/AR</span>
+                    </button>
+                    <button id="theme-toggle" class="p-2 rounded-full glass hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle Theme">
+                        <i class="ph ph-moon text-xl dark-mode-icon"></i>
+                        <i class="ph ph-sun text-xl light-mode-icon hidden dark:block text-yellow-300"></i>
+                    </button>
+                    <a href="pricing.html" class="btn-premium bg-primary text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-primary/30">
+                        Book Now
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden p-2 z-50 relative text-slate-800 dark:text-white">
+                    <div class="w-6 h-5 flex flex-col justify-between">
+                        <span class="w-full h-0.5 bg-current transform transition-transform duration-300"></span>
+                        <span class="w-full h-0.5 bg-current transition-opacity duration-300"></span>
+                        <span class="w-full h-0.5 bg-current transform transition-transform duration-300"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Padding -->
+    <div class="pt-24 bg-slate-50 dark:bg-slate-900"></div>
+
+    <!-- 1. Company Story -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <span class="text-primary font-bold uppercase tracking-widest text-sm mb-4 block">Our Origins</span>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">Born from the <br>Desire to Fly.</h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                        Founded in 2010 by a group of passionate alpine mountaineers, AeroGlide started with a single canopy and a dream to share the unparalleled beauty of our local valleys from above.
+                    </p>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Today, we are the region's leading luxury tandem flight operator, facilitating over 5,000 safe flights annually and introducing thousands to the purest form of aviation.
+                    </p>
+                </div>
+                <div class="md:w-1/2 relative" data-aos="fade-left">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl glass p-2 bg-white/50 dark:bg-white/5">
+                        <img src="assets/images/tandem_flight_closeup_1778495996469.png" alt="Founders flying" class="w-full h-auto rounded-2xl">
+                        <!-- Floating Year Badge -->
+                        <div class="absolute -bottom-6 -left-6 bg-accent text-white w-24 h-24 rounded-full flex flex-col items-center justify-center shadow-lg transform rotate-[-10deg]">
+                            <span class="text-xs font-bold uppercase">Since</span>
+                            <span class="text-2xl font-black">2010</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Mission + Safety Standards -->
+    <section class="py-24 bg-slate-100 dark:bg-slate-800/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Our Mission & <span class="text-primary">Standards</span></h2>
+                <p class="text-slate-600 dark:text-slate-400 text-lg">We don't just fly; we engineer safe memories. Our commitment to safety is uncompromising.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform" data-aos="fade-up" data-aos-delay="0">
+                    <i class="ph-bold ph-crosshair text-4xl text-primary mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Our Mission</h3>
+                    <p class="text-slate-600 dark:text-slate-400">To make the dream of flight accessible to everyone while providing a premium, hassle-free, and exhilarating adventure experience.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform bg-primary/5 dark:bg-primary/10 border-primary/20" data-aos="fade-up" data-aos-delay="100">
+                    <i class="ph-bold ph-shield-check text-4xl text-primary mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Safety First</h3>
+                    <p class="text-slate-600 dark:text-slate-400">We utilize multi-tiered safety protocols, including daily equipment inspections, secondary reserve parachutes, and strict weather thresholds.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform" data-aos="fade-up" data-aos-delay="200">
+                    <i class="ph-bold ph-leaf text-4xl text-primary mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Eco-Conscious</h3>
+                    <p class="text-slate-600 dark:text-slate-400">Aviation powered only by wind and gravity. We maintain zero carbon footprint during our flights and protect local wildlife nesting zones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Pilot Team -->
+    <section class="py-24 relative">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-end mb-16">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Meet Our <span class="text-primary">Elite Pilots</span></h2>
+                    <p class="text-slate-600 dark:text-slate-400">Over 50 years of combined flight experience.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Pilot 1 -->
+                <div class="group relative rounded-3xl overflow-hidden glass" data-aos="zoom-in" data-aos-delay="0">
+                    <!-- Placeholder using generated image or gray box since we didn't generate pilot photos -->
+                    <div class="h-80 bg-slate-300 dark:bg-slate-700 relative overflow-hidden">
+                        <img src="assets/images/launch_site_view_1778496013372.png" alt="Pilot" class="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-80"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                        <h3 class="text-xl font-bold">Capt. Alex Reed</h3>
+                        <p class="text-sm text-primary font-bold mb-2">Chief Paragliding Pilot</p>
+                        <p class="text-xs text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity delay-100">8,000+ flights. Master Instructor.</p>
+                    </div>
+                </div>
+                <!-- Pilot 2 -->
+                <div class="group relative rounded-3xl overflow-hidden glass" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="h-80 bg-slate-300 dark:bg-slate-700 relative overflow-hidden">
+                        <img src="assets/images/hang_gliding_valley_1778495978898.png" alt="Pilot" class="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-80"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                        <h3 class="text-xl font-bold">Sarah Jenkins</h3>
+                        <p class="text-sm text-primary font-bold mb-2">Senior Hang Glider</p>
+                        <p class="text-xs text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity delay-100">National Champion 2023.</p>
+                    </div>
+                </div>
+                <!-- Pilot 3 -->
+                <div class="group relative rounded-3xl overflow-hidden glass" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="h-80 bg-slate-300 dark:bg-slate-700 relative overflow-hidden">
+                        <img src="assets/images/paragliding_hero_bg_1778495960252.png" alt="Pilot" class="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-80"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                        <h3 class="text-xl font-bold">David Chen</h3>
+                        <p class="text-sm text-primary font-bold mb-2">Acrobatic Specialist</p>
+                        <p class="text-xs text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity delay-100">Specializes in high-G maneuvers.</p>
+                    </div>
+                </div>
+                <!-- Pilot 4 -->
+                <div class="group relative rounded-3xl overflow-hidden glass" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="h-80 bg-slate-300 dark:bg-slate-700 relative overflow-hidden">
+                        <img src="assets/images/tandem_flight_closeup_1778495996469.png" alt="Pilot" class="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-80"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                        <h3 class="text-xl font-bold">Elena Rossi</h3>
+                        <p class="text-sm text-primary font-bold mb-2">Tandem Instructor</p>
+                        <p class="text-xs text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity delay-100">Fluent in 4 languages. Perfect safety record.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Testimonials -->
+    <section class="py-24 bg-primary text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16">Wall of <span class="text-slate-900">Fame</span></h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                <!-- Review 1 -->
+                <div class="glass bg-white/10 p-8 rounded-2xl border-white/20">
+                    <div class="text-yellow-400 mb-4 text-xl"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                    <p class="italic mb-6">"Alex was incredible. I was terrified at launch, but he calmed me down instantly. The feeling of floating is indescribable."</p>
+                    <p class="font-bold">- John D. (Paragliding)</p>
+                </div>
+                <!-- Review 2 -->
+                <div class="glass bg-white/10 p-8 rounded-2xl border-white/20">
+                    <div class="text-yellow-400 mb-4 text-xl"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                    <p class="italic mb-6">"Hang gliding over the valley at sunset is the best thing I've done in my life. The video edit was Hollywood quality!"</p>
+                    <p class="font-bold">- Maria S. (Hang Gliding)</p>
+                </div>
+                <!-- Review 3 -->
+                <div class="glass bg-white/10 p-8 rounded-2xl border-white/20 hidden md:block">
+                    <div class="text-yellow-400 mb-4 text-xl"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                    <p class="italic mb-6">"Very professional setup. You can tell they take safety seriously without compromising on the fun factor."</p>
+                    <p class="font-bold">- Thomas K. (Paragliding)</p>
+                </div>
+            </div>
+            
+            <div class="mt-16">
+                <a href="pricing.html" class="bg-white text-primary px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all inline-block">
+                    Join the Club
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Footer for Template consistency -->
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm border-t border-slate-800">
+        <p>&copy; 2026 AeroGlide Aviation. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

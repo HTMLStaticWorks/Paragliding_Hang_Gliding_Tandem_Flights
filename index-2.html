@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroGlide | Niche Adventure Experience</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0284c7',
+                        'primary-dark': '#0369a1',
+                        accent: '#ea580c',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav id="main-header" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2 text-2xl font-bold tracking-tighter">
+                    <i class="ph-fill ph-paper-plane-tilt text-primary text-3xl"></i>
+                    <span class="text-white drop-shadow-md">Aero<span class="text-primary">Glide</span></span>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-white hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="index-2.html" class="text-primary font-medium transition-colors">Niche Tour</a>
+                    <a href="about.html" class="text-white hover:text-primary font-medium transition-colors">About</a>
+                    <a href="services.html" class="text-white hover:text-primary font-medium transition-colors">Services</a>
+                    <a href="pricing.html" class="text-white hover:text-primary font-medium transition-colors">Pricing</a>
+                    <a href="contact.html" class="text-white hover:text-primary font-medium transition-colors">Contact</a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button id="rtl-toggle" class="p-2 rounded-full glass hover:bg-white/20 transition-colors text-white" aria-label="Toggle RTL">
+                        <span class="font-bold text-sm">EN/AR</span>
+                    </button>
+                    <button id="theme-toggle" class="p-2 rounded-full glass hover:bg-white/20 transition-colors text-white" aria-label="Toggle Theme">
+                        <i class="ph ph-moon text-xl dark-mode-icon"></i>
+                        <i class="ph ph-sun text-xl light-mode-icon hidden dark:block text-yellow-300"></i>
+                    </button>
+                    <a href="pricing.html" class="btn-premium bg-primary text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-primary/30">
+                        Book Now
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-white z-50 relative">
+                    <div class="w-6 h-5 flex flex-col justify-between">
+                        <span class="w-full h-0.5 bg-current transform transition-transform duration-300"></span>
+                        <span class="w-full h-0.5 bg-current transition-opacity duration-300"></span>
+                        <span class="w-full h-0.5 bg-current transform transition-transform duration-300"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Fullscreen Adventure Hero -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden parallax-bg" style="background-image: url('assets/images/hang_gliding_valley_1778495978898.png');">
+        <div class="absolute inset-0 bg-black/50 dark:bg-black/70"></div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center mt-20" data-aos="zoom-in" data-aos-duration="1000">
+            <span class="inline-block border border-accent text-accent py-1 px-4 rounded-full text-sm font-bold tracking-widest uppercase mb-6 bg-accent/10 backdrop-blur-sm">Niche Adventure Tour</span>
+            <h1 class="text-5xl md:text-8xl font-black text-white mb-6 uppercase tracking-tight">
+                Extreme <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-yellow-500">Altitude</span>
+            </h1>
+            <p class="text-xl text-slate-200 mb-10 max-w-2xl mx-auto font-light">
+                For the true adrenaline seeker. High-altitude thermal flights spanning cross-country with elite acrobatic maneuvers.
+            </p>
+            <a href="#booking" class="btn-premium bg-accent text-white px-10 py-5 rounded-none font-bold text-lg hover:bg-accent-hover transition-colors inline-flex items-center gap-2">
+                Start Your Mission <i class="ph-bold ph-arrow-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 2. Flight Process Timeline -->
+    <section class="py-24 bg-white dark:bg-slate-900">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Your Mission <span class="text-accent">Timeline</span></h2>
+                <p class="text-slate-600 dark:text-slate-400">Step-by-step breakdown of your extreme altitude experience.</p>
+            </div>
+
+            <div class="relative border-l-4 border-slate-200 dark:border-slate-800 ml-6 md:ml-12 space-y-12">
+                <!-- Step 1 -->
+                <div class="relative pl-8 md:pl-0" data-aos="fade-left" data-aos-delay="0">
+                    <div class="md:flex items-center justify-between">
+                        <div class="md:w-5/12 text-right hidden md:block pr-8">
+                            <h3 class="text-2xl font-bold">Basecamp Briefing</h3>
+                            <p class="text-slate-500 dark:text-slate-400">08:00 AM</p>
+                        </div>
+                        <div class="absolute left-[-26px] md:left-1/2 md:-ml-[22px] w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold border-4 border-white dark:border-slate-900 z-10 shadow-lg">
+                            1
+                        </div>
+                        <div class="md:w-5/12 md:pl-8">
+                            <h3 class="text-2xl font-bold md:hidden mb-2">Basecamp Briefing</h3>
+                            <p class="text-slate-600 dark:text-slate-400 glass p-6 rounded-2xl">Meet your master pilot, review weather charts, and receive technical safety instructions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative pl-8 md:pl-0" data-aos="fade-right" data-aos-delay="100">
+                    <div class="md:flex items-center justify-between flex-row-reverse">
+                        <div class="md:w-5/12 text-left hidden md:block pl-8">
+                            <h3 class="text-2xl font-bold">Ascent to Launch</h3>
+                            <p class="text-slate-500 dark:text-slate-400">09:00 AM</p>
+                        </div>
+                        <div class="absolute left-[-26px] md:left-1/2 md:-ml-[22px] w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold border-4 border-white dark:border-slate-900 z-10 shadow-lg">
+                            2
+                        </div>
+                        <div class="md:w-5/12 md:pr-8 text-right">
+                            <h3 class="text-2xl font-bold md:hidden mb-2 text-left">Ascent to Launch</h3>
+                            <p class="text-slate-600 dark:text-slate-400 glass p-6 rounded-2xl text-left md:text-right">Off-road 4x4 transport to our highest altitude launch point at 8,500 ft.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative pl-8 md:pl-0" data-aos="fade-left" data-aos-delay="200">
+                    <div class="md:flex items-center justify-between">
+                        <div class="md:w-5/12 text-right hidden md:block pr-8">
+                            <h3 class="text-2xl font-bold text-accent">Cross-Country Flight</h3>
+                            <p class="text-slate-500 dark:text-slate-400">10:30 AM</p>
+                        </div>
+                        <div class="absolute left-[-26px] md:left-1/2 md:-ml-[22px] w-10 h-10 rounded-full bg-white text-accent flex items-center justify-center font-bold border-4 border-accent z-10 shadow-lg">
+                            3
+                        </div>
+                        <div class="md:w-5/12 md:pl-8">
+                            <h3 class="text-2xl font-bold md:hidden mb-2 text-accent">Cross-Country Flight</h3>
+                            <p class="text-slate-600 dark:text-slate-400 glass p-6 rounded-2xl border-l-4 border-accent">The main event. Catch thermal updrafts, fly among the clouds, and experience high-G acrobatic maneuvers (optional).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Weight Limits + Safety Rules -->
+    <section class="py-24 bg-slate-100 dark:bg-slate-800/50">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 text-red-600 mb-6">
+                        <i class="ph-bold ph-warning text-3xl"></i>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Strict <span class="text-red-500">Requirements</span></h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-lg mb-8">Extreme altitude flights require strict adherence to physical limitations to ensure equipment integrity and passenger safety.</p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 glass p-4 rounded-xl">
+                            <i class="ph-fill ph-check-circle text-green-500 text-xl"></i>
+                            <span class="font-bold">Weight Limit: 45kg to 95kg max</span>
+                        </li>
+                        <li class="flex items-center gap-3 glass p-4 rounded-xl">
+                            <i class="ph-fill ph-check-circle text-green-500 text-xl"></i>
+                            <span class="font-bold">Age: 16+ years old only</span>
+                        </li>
+                        <li class="flex items-center gap-3 glass p-4 rounded-xl">
+                            <i class="ph-fill ph-check-circle text-green-500 text-xl"></i>
+                            <span class="font-bold">No history of heart conditions or epilepsy</span>
+                        </li>
+                        <li class="flex items-center gap-3 glass p-4 rounded-xl">
+                            <i class="ph-fill ph-check-circle text-green-500 text-xl"></i>
+                            <span class="font-bold">Must complete digital waiver 24hrs prior</span>
+                        </li>
+                    </ul>
+                </div>
+                <div data-aos="fade-left">
+                    <img src="assets/images/launch_site_view_1778496013372.png" alt="Safety Check" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Flight Video Add-ons -->
+    <section class="py-24 bg-slate-900 text-white relative">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4" data-aos="fade-up">Capture the <span class="text-accent">Extreme</span></h2>
+            <p class="text-slate-400 mb-16 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Don't rely on memory alone. Relive your adrenaline rush with our professional 360° and 4K media packages.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Package 1 -->
+                <div class="glass p-8 rounded-2xl border border-white/10 hover:border-accent transition-colors" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="ph-bold ph-video-camera text-4xl text-accent mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Pro 4K Edit</h3>
+                    <p class="text-slate-400 mb-6">Fully edited 3-minute highlight reel with music overlay and color correction.</p>
+                    <p class="text-3xl font-bold text-white mb-6">$89</p>
+                    <button class="w-full bg-white/10 hover:bg-accent text-white py-3 rounded-full font-bold transition-colors">Add to Booking</button>
+                </div>
+                <!-- Package 2 -->
+                <div class="glass bg-accent/10 p-8 rounded-2xl border border-accent shadow-[0_0_30px_rgba(234,88,12,0.3)]" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="absolute top-0 right-0 bg-accent text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-xl">POPULAR</div>
+                    <i class="ph-bold ph-camera-rotate text-4xl text-accent mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Immersive 360°</h3>
+                    <p class="text-slate-400 mb-6">Interactive 360-degree video allowing you to look anywhere during your flight.</p>
+                    <p class="text-3xl font-bold text-white mb-6">$129</p>
+                    <button class="w-full bg-accent hover:bg-accent-hover text-white py-3 rounded-full font-bold transition-colors">Add to Booking</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FAQ Accordion -->
+    <section class="py-24 bg-white dark:bg-slate-900">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl font-bold text-center mb-12">Mission Briefing <span class="text-slate-400">(FAQ)</span></h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <details class="glass group rounded-xl p-6 open:bg-slate-50 dark:open:bg-slate-800 transition-colors" open>
+                    <summary class="flex justify-between items-center font-bold cursor-pointer text-lg outline-none">
+                        What if the weather turns bad?
+                        <span class="transition group-open:rotate-180">
+                            <i class="ph-bold ph-caret-down"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+                        Extreme flights are highly weather dependent. If conditions are unsafe, we will reschedule your flight for the next available window at no additional cost.
+                    </div>
+                </details>
+                
+                <!-- FAQ Item 2 -->
+                <details class="glass group rounded-xl p-6 open:bg-slate-50 dark:open:bg-slate-800 transition-colors">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer text-lg outline-none">
+                        Can I request acrobatic maneuvers?
+                        <span class="transition group-open:rotate-180">
+                            <i class="ph-bold ph-caret-down"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+                        Yes! Just let your pilot know during the basecamp briefing. Maneuvers like wingovers and deep spirals pull up to 3Gs.
+                    </div>
+                </details>
+
+                <!-- FAQ Item 3 -->
+                <details class="glass group rounded-xl p-6 open:bg-slate-50 dark:open:bg-slate-800 transition-colors">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer text-lg outline-none">
+                        What should I wear?
+                        <span class="transition group-open:rotate-180">
+                            <i class="ph-bold ph-caret-down"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+                        Dress as if you are going for a hike in cold weather. Windproof jacket, gloves, and sturdy ankle-supporting boots are mandatory.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Booking + Online Waiver CTA -->
+    <section id="booking" class="py-24 bg-slate-100 dark:bg-slate-800/50">
+        <div class="container mx-auto px-6 max-w-4xl text-center glass p-12 md:p-20 rounded-3xl relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-accent/5 to-transparent skew-x-12 translate-x-full group-hover:-translate-x-full transition-transform duration-1000"></div>
+            
+            <h2 class="text-4xl md:text-6xl font-black mb-6 uppercase">Commit to the <br/><span class="text-accent">Drop</span></h2>
+            <p class="text-lg text-slate-600 dark:text-slate-400 mb-10">Secure your spot for the extreme altitude tour. Limited to 2 slots per day.</p>
+            
+            <form class="max-w-xl mx-auto space-y-4 mb-8">
+                <input type="text" placeholder="Full Name (as on ID)" class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-accent">
+                <input type="email" placeholder="Email Address" class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-accent">
+                <div class="flex items-center gap-3 text-left">
+                    <input type="checkbox" id="waiver" class="w-5 h-5 text-accent rounded focus:ring-accent accent-accent">
+                    <label for="waiver" class="text-sm text-slate-600 dark:text-slate-400">I agree to sign the digital <a href="#" class="text-accent underline">Liability Waiver</a> before flight.</label>
+                </div>
+            </form>
+            
+            <button class="w-full max-w-xl bg-accent text-white px-8 py-4 rounded-xl font-bold text-xl shadow-lg shadow-accent/30 hover:-translate-y-1 transition-transform">
+                Lock In My Flight - $399
+            </button>
+        </div>
+    </section>
+
+    <!-- Simple Footer for Template consistency -->
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm border-t border-slate-800">
+        <p>&copy; 2026 AeroGlide Aviation. Extreme Tours Division.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
