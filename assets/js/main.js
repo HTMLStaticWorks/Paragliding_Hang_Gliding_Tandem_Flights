@@ -24,25 +24,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. RTL Toggle
     const rtlToggleBtn = document.getElementById('rtl-toggle');
+    const rtlToggleBtnMobile = document.getElementById('rtl-toggle-mobile');
     
-    if (localStorage.getItem('dir') === 'rtl') {
-        document.documentElement.setAttribute('dir', 'rtl');
-    } else {
-        document.documentElement.setAttribute('dir', 'ltr');
+    function updateRtlButtons(dir) {
+        const text = dir === 'rtl' ? 'LTR' : 'RTL';
+        if (rtlToggleBtn) {
+            rtlToggleBtn.querySelector('span').textContent = text;
+        }
+        if (rtlToggleBtnMobile) {
+            rtlToggleBtnMobile.textContent = text;
+        }
     }
 
-    if (rtlToggleBtn) {
-        rtlToggleBtn.addEventListener('click', () => {
-            const currentDir = document.documentElement.getAttribute('dir');
-            if (currentDir === 'rtl') {
-                document.documentElement.setAttribute('dir', 'ltr');
-                localStorage.setItem('dir', 'ltr');
-            } else {
-                document.documentElement.setAttribute('dir', 'rtl');
-                localStorage.setItem('dir', 'rtl');
-            }
-        });
-    }
+    const savedDir = localStorage.getItem('dir') || 'ltr';
+    document.documentElement.setAttribute('dir', savedDir);
+    updateRtlButtons(savedDir);
+
+    const toggleDir = () => {
+        const currentDir = document.documentElement.getAttribute('dir');
+        const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+        document.documentElement.setAttribute('dir', newDir);
+        localStorage.setItem('dir', newDir);
+        updateRtlButtons(newDir);
+    };
+
+    if (rtlToggleBtn) rtlToggleBtn.addEventListener('click', toggleDir);
+    if (rtlToggleBtnMobile) rtlToggleBtnMobile.addEventListener('click', toggleDir);
 
     // 3. Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -51,14 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileMenuBtn && mobileMenu) {
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('translate-x-full');
-            // Animate hamburger lines
-            const lines = mobileMenuBtn.querySelectorAll('span');
-            if(lines.length === 3) {
-                lines[0].classList.toggle('rotate-45');
-                lines[0].classList.toggle('translate-y-2.5');
-                lines[1].classList.toggle('opacity-0');
-                lines[2].classList.toggle('-rotate-45');
-                lines[2].classList.toggle('-translate-y-2.5');
+            
+            // Toggle icons
+            const menuIcon = mobileMenuBtn.querySelector('.menu-icon');
+            const closeIcon = mobileMenuBtn.querySelector('.close-icon');
+            if (menuIcon && closeIcon) {
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
             }
         });
     }
@@ -108,4 +114,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // 7. Active Link Highlighting
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const allNavLinks = document.querySelectorAll('nav a, #mobile-menu a');
+    
+    allNavLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPath || (currentPath === 'index.html' && href === './')) {
+            link.classList.add('text-primary');
+            link.classList.remove('text-slate-800', 'dark:text-white', 'dark:text-slate-100');
+            
+            // Mobile specific highlight
+            if (link.closest('#mobile-menu')) {
+                link.classList.add('border-primary');
+                link.classList.remove('border-slate-100', 'dark:border-slate-800');
+            }
+        }
+    });
 });

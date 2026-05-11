@@ -23,9 +23,14 @@ html {
   font-family: 'Inter', sans-serif;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
 body {
   transition: background-color 0.3s ease, color 0.3s ease;
-  overflow-x: hidden;
 }
 
 /* Glassmorphism Utilities */
@@ -109,8 +114,35 @@ body {
   animation: float 4s ease-in-out infinite;
 }
 
+/* Footer Enhancements */
+footer a {
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--primary) !important;
+  transform: translateX(5px);
+}
+
+/* Specifically for social icons to keep them white on hover */
+footer .flex.space-x-4 a {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+footer .flex.space-x-4 a:hover {
+  transform: scale(1.2) translateY(-5px);
+  background-color: var(--primary) !important;
+  color: white !important;
+  box-shadow: 0 10px 20px rgba(2, 132, 199, 0.4);
+}
+
+footer .flex.space-x-4 a:hover i {
+  color: white !important;
+}
+
 /* Setup Hide/Show based on theme to prevent flash */
-.dark-mode-icon { display: none; }
-.light-mode-icon { display: block; }
-.dark .dark-mode-icon { display: block; }
-.dark .light-mode-icon { display: none; }
+.dark-mode-icon { display: block; } /* Moon is visible in light mode */
+.light-mode-icon { display: none; } /* Sun is hidden in light mode */
+
+.dark .dark-mode-icon { display: none; } /* Moon hidden in dark mode */
+.dark .light-mode-icon { display: block; } /* Sun visible in dark mode */
